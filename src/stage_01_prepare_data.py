@@ -10,6 +10,7 @@ import random
 
 STAGE = "Prepare Data" 
 
+os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 
     level=logging.INFO, 
@@ -28,14 +29,14 @@ def main(config_path, params_path):
     source_data_path = os.path.join(source_data_dir, source_data_file)
 
     split = params["prepare"]["split"]
-    seed = params["prepare"]["seeds"]
+    seed = params["prepare"]["seed"]
     tag = params["prepare"]["tag"]
 
     random.seed(seed)
 
     artifacts = config["artifacts"]
-    prepare_data_dir_path = os.apth.join(artifacts["ARTIFACTS_DIR"], artifacts["PREPARED"])
-    create_directories(prepare_data_dir_path)
+    prepare_data_dir_path = os.path.join(artifacts["ARTIFACTS_DIR"], artifacts["PREPARED_DATA"])
+    create_directories([prepare_data_dir_path])
 
     train_data_path = os.path.join(prepare_data_dir_path, artifacts["TRAIN_DATA"])
     test_data_path = os.path.join(prepare_data_dir_path, artifacts["TEST_DATA"])
