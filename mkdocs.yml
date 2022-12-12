@@ -4,6 +4,7 @@ site_name: NLP Project
 nav:
   - Home: index.md
   - Data-prep-stage: data_prep.md
+  - Featurization: featurization.md
 
 site_author: Shivansh Kaushal
 site_description: >-
