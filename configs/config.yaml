@@ -18,7 +18,6 @@ plots:
   ROC: roc.json
 
 source_data:
-  URL: https://github.com/c17hawke/FSDS-DVC-NLP-Project-with-docs/raw/be1801e2ca505f7386860735b6b57c8abce90e60/data/data.xml
   data_dir: data
   data_file: data.xml
 
